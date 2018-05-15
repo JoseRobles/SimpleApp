@@ -1,0 +1,16 @@
+<form class="ui large form segment">
+  <div class="field">
+    <label for="title">Title:</label>
+    <input name="title" #newtitle value="{{ article?.title }}">  <!-- changed -->
+  </div>
+  <div class="field">
+    <label for="link">Link: </label>
+    <input name="link" #newlink value="{{ article?.link }}"> <!-- changed -->
+  </div>
+  <!-- added this button -->
+  <button (click)="updateArticle(newtitle, newlink)"  
+          class="ui positive right floated button">  
+    Update
+  </button>  
+
+</form>

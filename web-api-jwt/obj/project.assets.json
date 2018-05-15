@@ -12605,28 +12605,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jyovera\\.nuget\\packages\\": {},
+    "C:\\Users\\jose_\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\work\\Belatrix\\courses\\Angular-20118-I\\Git\\Angular-2018-I\\web-api-jwt\\WebApi.csproj",
+      "projectUniqueName": "C:\\Development\\Angular\\SimpleApp-Angular\\Angular-2018-I\\web-api-jwt\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\work\\Belatrix\\courses\\Angular-20118-I\\Git\\Angular-2018-I\\web-api-jwt\\WebApi.csproj",
-      "packagesPath": "C:\\Users\\jyovera\\.nuget\\packages\\",
-      "outputPath": "C:\\work\\Belatrix\\courses\\Angular-20118-I\\Git\\Angular-2018-I\\web-api-jwt\\obj\\",
+      "projectPath": "C:\\Development\\Angular\\SimpleApp-Angular\\Angular-2018-I\\web-api-jwt\\WebApi.csproj",
+      "packagesPath": "C:\\Users\\jose_\\.nuget\\packages\\",
+      "outputPath": "C:\\Development\\Angular\\SimpleApp-Angular\\Angular-2018-I\\web-api-jwt\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\jyovera\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jose_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -1,12 +1,24 @@
 
-<div class="col-md-6 col-md-offset-3">
+<div class="col-md-6 col-md-offset-3" *ngIf="currentUser;else elseBlock">
   <h1>Hi {{currentUser.firstName}}!</h1>
   <p>You're logged in with the ASP.NET Core & Angular 5!!</p>
   <h3>All registered users:</h3>
   <ul>
       <li *ngFor="let user of users">
+          *ngIf="user"
           {{user.username}} ({{user.firstName}} {{user.lastName}})
           - <i class="bordered alternate outline trash icon" (click)="deleteUser(user.id)"></i>
       </li>
   </ul>
 </div>
+<ng-template #elseBlock>
+    <div>
+        <b>You're not logged in!.</b>
+        <br>
+        <br>
+        <label>You can Login by clicing the Login Button:</label>
+        <br>
+        <br>
+        <button (click)="redirectLogin()" [disabled]="loading" class="btn btn-primary" id="btnLogin">Login</button>
+    </div> 
+</ng-template>

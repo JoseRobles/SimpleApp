@@ -28,7 +28,8 @@ import { AppConfig } from './app.config';
 import { AuthGuard } from './_guards';
 import { AlertService, UserService, AuthenticationService } from './_services';
 import { RouteComponent } from './shared/router.component';
-
+import { EditArticleComponent } from './edit-article/edit-article.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,9 @@ import { RouteComponent } from './shared/router.component';
     HomeComponent,
     RegisterComponent,
     AlertComponent,
-    RouteComponent
+    RouteComponent,
+    EditArticleComponent,
+    AboutComponent
 ],
   imports: [
     BrowserModule,

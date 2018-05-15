@@ -23,19 +23,34 @@ export class ArticlesService {
     return this.http.post<Article[]>(`${this.apiUrl}/articles`, newArticle)
     .pipe();
   }
+
+  deleteArticle(id:number)
+  {
+    return this.http.delete(`${this.apiUrl}/articles/${id}`);
+  }
+
   getList(filters:IArticleFilterParam): Observable<Article[]> {
     let params = new HttpParams();
     params = params.append('_sort', filters.sortBy.toLowerCase());
     params = params.append('_order',"desc");
     return this.http.get<Article[]>(`${this.apiUrl}/articles`, { params: params })
     .pipe();
-}
-getAll(): Observable<Article[]> {
-  let params = new HttpParams();
-  params = params.append('_sort', "votes");
-  params = params.append('_order', "desc");
-  return this.http.get<Article[]>(`${this.apiUrl}/articles`, { params: params })
+  }
+
+  getArticle(id:number): Observable<Article>
+  {
+     console.log('Llego: ' + id);
+     
+     return this.http.get<Article>(`${this.apiUrl}/articles/${id}`);
+  }
+
+  getAll(): Observable<Article[]> {
+    let params = new HttpParams();
+    params = params.append('_sort', "votes");
+    params = params.append('_order', "desc");
+    return this.http.get<Article[]>(`${this.apiUrl}/articles`, { params: params })
     .pipe();
-}
+  }
+
 
 }

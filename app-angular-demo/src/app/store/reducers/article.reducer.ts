@@ -4,7 +4,7 @@ import { IArticleState } from '../models/articleState';
 import { InitialArticleStateActions } from '../actions/article.action';
 
 export const INITIAL_STATE: IArticleState = {
-    article:{ title:'',link:'',votes:0},
+    article:{ id:0, title:'',link:'',votes:0},
     articles:[]
 }
 

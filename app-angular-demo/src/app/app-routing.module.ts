@@ -8,6 +8,8 @@ import { RegisterComponent } from './register';
 import { HomeComponent } from './home/home.component';
 import { RouteComponent } from './shared/router.component';
 import { AuthGuard } from './_guards';
+import { EditArticleComponent } from './edit-article/edit-article.component';
+import { AboutComponent } from './about/about.component';
 
 let routes: Routes = [
     { path: '', component: HomeComponent},
@@ -20,10 +22,11 @@ let routes: Routes = [
         { path: 'new-article', component: ArticleNewComponent},
       ]
     },
-    { path: 'about', loadChildren:'app/about/about.module#AboutModule'},
+    { path: 'about', component: AboutComponent},
     { path: 'login', component: LoginComponent},
     { path: 'register', component: RegisterComponent},
-    { path: '**', redirectTo: '', pathMatch: 'full' }
+   //{ path: '**', redirectTo: '', pathMatch: 'full' },
+    { path: 'edit-article/:id', component:EditArticleComponent}
 ];
 
 @NgModule({

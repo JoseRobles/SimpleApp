@@ -13,6 +13,16 @@
       {{ article.title }}
     </a>
     <div class="meta">({{ domain(article.link) }})</div>
+    <div>
+    <a [routerLink]="['/edit-article',article.id]"> 
+       <i class="edit icon"></i>
+       edit
+    </a>
+    <a href (click)="delete(article.id)">
+      <i class="delete icon"></i>
+      delete
+    </a>
+    </div>
     <ul class="ui big horizontal list voters">
       <li class="item">
         <a href (click)="voteUp(article.votes)">
