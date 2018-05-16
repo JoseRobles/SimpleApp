@@ -37,11 +37,8 @@ export class ArticlesService {
     .pipe();
   }
 
-  getArticle(id:number): Observable<Article>
-  {
-     console.log('Llego: ' + id);
-     
-     return this.http.get<Article>(`${this.apiUrl}/articles/${id}`);
+  getListOriginal(): Observable<Article[]> {    
+    return this.http.get<Article[]>(`${this.apiUrl}/articles`).pipe();
   }
 
   getAll(): Observable<Article[]> {
@@ -51,6 +48,20 @@ export class ArticlesService {
     return this.http.get<Article[]>(`${this.apiUrl}/articles`, { params: params })
     .pipe();
   }
+
+  getArticle(id:number): Observable<Article>
+  {    
+     return this.http.get<Article>(`${this.apiUrl}/articles/${id}`);
+  }
+
+  updateArticle(id:number, title:string, link:string)
+  {
+    let newArticle= new Article(title, link, 0);
+    return this.http.put<Article>(`${this.apiUrl}/articles/${id}`, newArticle).pipe();
+  }
+
+
+
 
 
 }

@@ -40,6 +40,7 @@ export class ArticlesFilterComponent implements OnInit {
   }
 
   updateList() {
+    console.log('Updating filter');
     this.onUpdateFilters.emit(this.filters);
   }
 

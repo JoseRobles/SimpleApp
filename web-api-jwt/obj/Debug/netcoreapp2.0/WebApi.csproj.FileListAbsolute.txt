@@ -18,3 +18,13 @@ C:\Development\Angular\SimpleApp-Angular\Angular-2018-I\web-api-jwt\bin\Debug\ne
 C:\Development\Angular\SimpleApp-Angular\Angular-2018-I\web-api-jwt\bin\Debug\netcoreapp2.0\WebApi.runtimeconfig.dev.json
 C:\Development\Angular\SimpleApp-Angular\Angular-2018-I\web-api-jwt\bin\Debug\netcoreapp2.0\WebApi.dll
 C:\Development\Angular\SimpleApp-Angular\Angular-2018-I\web-api-jwt\bin\Debug\netcoreapp2.0\WebApi.pdb
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\bin\Debug\netcoreapp2.0\WebApi.deps.json
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\bin\Debug\netcoreapp2.0\WebApi.runtimeconfig.json
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\bin\Debug\netcoreapp2.0\WebApi.runtimeconfig.dev.json
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\bin\Debug\netcoreapp2.0\WebApi.dll
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\bin\Debug\netcoreapp2.0\WebApi.pdb
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\obj\Debug\netcoreapp2.0\WebApi.csproj.CoreCompileInputs.cache
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\obj\Debug\netcoreapp2.0\WebApi.AssemblyInfoInputs.cache
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\obj\Debug\netcoreapp2.0\WebApi.AssemblyInfo.cs
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\obj\Debug\netcoreapp2.0\WebApi.dll
+C:\Development\TareaAngular2\SimpleApp\web-api-jwt\obj\Debug\netcoreapp2.0\WebApi.pdb

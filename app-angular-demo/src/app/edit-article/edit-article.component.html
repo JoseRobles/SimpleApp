@@ -1,14 +1,14 @@
 <form class="ui large form segment">
   <div class="field">
     <label for="title">Title:</label>
-    <input name="title" #newtitle value="{{ article?.title }}">  <!-- changed -->
+    <input class="inputTitle" id="inputTitle" name="inputTitle" [(ngModel)]="title" >  <!-- changed -->
   </div>
   <div class="field">
     <label for="link">Link: </label>
-    <input name="link" #newlink value="{{ article?.link }}"> <!-- changed -->
+    <input name="link"[(ngModel)]="link"> <!-- changed -->
   </div>
   <!-- added this button -->
-  <button (click)="updateArticle(newtitle, newlink)"  
+  <button (click)="updateArticle(article.id, article.title, article.link)"  
           class="ui positive right floated button">  
     Update
   </button>  

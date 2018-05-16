@@ -30,6 +30,7 @@ import { AlertService, UserService, AuthenticationService } from './_services';
 import { RouteComponent } from './shared/router.component';
 import { EditArticleComponent } from './edit-article/edit-article.component';
 import { AboutComponent } from './about/about.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { AboutComponent } from './about/about.component';
     FormsModule,
     HttpClientModule,
     NgReduxModule,
-    HttpModule
+    HttpModule,
+    RouterModule
   ],
   providers: [ArticlesService,CounterActions,
     InitialArticleStateActions,InitialArticleStateEpics,

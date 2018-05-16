@@ -12,7 +12,7 @@ import { IArticleFilterParam } from '../_models/shared.model';
   styleUrls: ['./articles-list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ArticlesListComponent implements OnInit, OnChanges {
+export class ArticlesListComponent implements OnInit {
   articles: Article[]; // <-- component property
   sortValue: any = "";
   filters: IArticleFilterParam = {
@@ -25,7 +25,7 @@ export class ArticlesListComponent implements OnInit, OnChanges {
   @Input() set sortBy(value: string) {
     this.filters.sortBy = value;
   }
-  @select(['articleState', 'articles']) articles$: Observable<any>;
+  //@select(['articleState', 'articles']) articles$: Observable<any>;
   articlesSubscription: Subscription;
 
   constructor(private articleService: ArticlesService,
@@ -61,22 +61,16 @@ export class ArticlesListComponent implements OnInit, OnChanges {
   }
   ngOnInit() {
     //this.articles = this.articleService.articles;
-    //this.loadList();
-    this.articlesSubscription = this.articles$.distinctUntilChanged().subscribe((availableColumns) => {
+    this.loadList();
+    /*this.articlesSubscription = this.articles$.distinctUntilChanged().subscribe((availableColumns) => {
       this.articles = availableColumns;
       console.log("getting values from store");
 			//this.cd.detectChanges() ;public cd: ChangeDetectorRef
-		});
+		});*/
   }
-  ngOnChanges(): void {
-    console.log("changing", this.filters.sortBy);
-    //this.sortValue = this.filters.sortBy;
-    this.loadList();
-    this.cd.detectChanges();
-    this.cd.markForCheck();
-  }
+  
   loadList() {
-    this.filterObservable = this.articleService.getList(this.filters)
+      this.articleService.getListOriginal()
       .subscribe(result => {
         this.articles=result;
         console.log(this.articles);

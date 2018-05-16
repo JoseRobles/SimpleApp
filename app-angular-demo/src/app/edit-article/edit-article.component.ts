@@ -17,6 +17,9 @@ export class EditArticleComponent implements OnInit {
   id:number;
   article: Article;
   filterObservable: any;
+  updateObservable: any;
+  title:string = "";
+  link: string = "";
 
   constructor(private articleService:ArticlesService, private router: Router, private route:ActivatedRoute, private http:Http) { }
 
@@ -24,8 +27,10 @@ export class EditArticleComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = params['id'];
      
-      this.filterObservable = this.articleService.getArticle(this.id) .subscribe(result => {
+      this.filterObservable = this.articleService.getArticle(this.id).subscribe(result => {
         this.article=result;
+        this.title = this.article.title;
+        this.link = this.article.link;
       }, err => {
         console.log("error log");
       },
@@ -36,6 +41,21 @@ export class EditArticleComponent implements OnInit {
       
     
     });
+
+  }
+
+  updateArticle(id:number)
+  {    
+     this.updateObservable = this.articleService.updateArticle(id,this.title,this.link).subscribe(result => {
+      console.log(result);
+      this.router.navigate(['/list']);
+    }, err => {
+      console.log("error log");
+    },
+      () => {
+        console.log("finish log");
+      }
+    );
 
   }
 
